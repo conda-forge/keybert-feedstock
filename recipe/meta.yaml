@@ -1,5 +1,5 @@
 {% set name = "keybert" %}
-{% set version = "0.8.3" %}
+{% set version = "0.8.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/keybert-{{ version }}.tar.gz
-  sha256: cfa7d7d106cbf21268e7f62107e639a5d831fd4e146237b8453e90a211b72c70
+  sha256: 35473ab0842cf6d09bcfd0677cee9a21a8b0448bbb3f309ea3827ca297f24611
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  noarch: python 
+  noarch: python
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - scikit-learn >=0.22.2
     - numpy >=1.18.5
     - rich >=10.4.0
-    - torchvision 
+    - torchvision
     - sentencepiece
     - pytorch >=1.11.0
 
